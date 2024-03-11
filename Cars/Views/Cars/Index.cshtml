@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Cars.Models.Car.CarsIndexViewModel>
+
+@{
+    int rowNr = 1;
+}
+<body>
+    <div style="padding: 20px">
+        <form method="post" class="form" style="padding:30px;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Nr</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Make</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Model</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Year</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Transmission</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Drivetrain</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Fuel</label>
+                                <div class="col-sm-9">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var cars in Model)
+                        {
+                            <tr style="background-color: rgba(255, 255, 255, 0.9);">
+                                <td>@rowNr</td>
+                                <td>@cars.Make</td>
+                                <td>@cars.Model</td>
+                                <td>@cars.Year</td>
+                                <td>@cars.Transmission</td>
+                                <td>@cars.Drivetrain</td>
+                                <td>@cars.Fuel</td>
+                                <td>
+                                    <a asp-action="details" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-success">Details</a>
+                                    <a asp-action="update" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-warning">Update</a>
+                                    <a asp-action="delete" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-danger">Delete</a>
+                                </td>
+                            </tr>
+                            rowNr += 1;
+                        }
+                    }
+                    else
+                    {
+                        <p>404</p>
+                    }
+                </tbody>
+            </table>
+        </form>
+        <div>
+            <a asp-action="create" asp-controller="cars" type="submit" class="btn btn-success">Create</a>
+        </div>
+    </div>
+</body>

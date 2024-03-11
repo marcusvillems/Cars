@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Cars.Models.Car.CarsIndexViewModel>
+
+@{
+    int rowNr = 1;
+}
+<body>
+    <div style="padding: 30px">
+        <form method="post" class="form" style="padding:40px;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Nr</th>
+                        <th scope="col">Make</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Transmission</th>
+                        <th scope="col">Drivetrain</th>
+                        <th scope="col">Fuel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var cars in Model)
+                        {
+                            <tr>
+                                <td>@rowNr</td>
+                                <td>@cars.Make</td>
+                                <td>@cars.Model</td>
+                                <td>@cars.Year</td>
+                                <td>@cars.Transmission</td>
+                                <td>@cars.Drivetrain</td>
+                                <td>@cars.Fuel</td>
+                                <td>
+                                    <a asp-action=" details" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-success">Details</a>
+                                    <a asp-action=" update" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-warning">Update</a>
+                                    <a asp-action=" delete" asp-controller="cars" asp-route-id="@cars.Id" class="btn btn-outline-danger">Delete</a>
+                                </td>
+                            </tr>
+                            rowNr += 1;
+                        }
+                    }
+                    else
+                    {
+                        <p>404</p>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>

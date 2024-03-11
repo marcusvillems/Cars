@@ -1,0 +1,95 @@
+﻿@model Cars.Models.Car.CarsDetailsViewModel
+
+<header>
+    <h2 style="padding:20px">Details</h2>
+</header>
+
+<body>
+    <div>
+
+        <dl class="row">
+
+            <div class="form-group row">
+                <label asp-for="Id" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Id" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Make" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Make" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Model" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Model" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Year" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Year" class="form-control" readonly />
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label asp-for="Color" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Color" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Power" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Power" class="form-control" readonly />
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label asp-for="Transmission" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Transmission" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Drivetrain" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Drivetrain" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Fuel" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="Fuel" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="CreatedAt" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="CreatedAt" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="UpdatedAt" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="UpdatedAt" class="form-control" readonly />
+                </div>
+            </div>
+
+        </dl>
+        <a asp-action="Index" asp-controller="cars" class="btn btn-primary">Back</a>
+
+    </div>
+</body>
