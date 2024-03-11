@@ -1,18 +1,74 @@
-html {
-  font-size: 14px;
-}
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+body, h1, h2, p, ul, li {
+    margin: 1px;
+    padding: 5px;
+    border-radius 10px;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: Montserrat, serif, sans-serif;
+    line-height: 1.6;
+    background-image: url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2024/site-simp/overview/pfa/2024-nissan-gt-r-sports-car-light-green-side-profile-view.jpg');
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    color: #333;
+    font-weight: bold;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
+
+
+
+.navbar {
+    background:none;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    justify-content:space-evenly;
+}
+
+    .navbar a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+.custom-input {
+    width: auto;
+    max-width: 150px;
+}
+
+h3 {
+    color:white;
+}
+
+.form-group.row {
+    padding: 5px;
+}
+
+.form-group.row label {
+        font-variant: small-caps;
+}
+
+.custom-label {
+    font-variant: small-caps;
+}
+
+.form-group.row {
+    background-color: white;
+    padding: 5px;
+}
+
+    .form-group.row label {
+        font-variant: small-caps;
+    }
+
